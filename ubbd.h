@@ -85,7 +85,7 @@ struct ubbd_ce {
 
 static inline enum ubbd_op ubbd_se_hdr_get_op(__u32 len_op)
 {
-       return len_op & UBBD_OP_MASK;
+       return (enum ubbd_op)(len_op & UBBD_OP_MASK);
 }
 
 static inline void ubbd_se_hdr_set_op(__u32 *len_op, enum ubbd_op op)
