@@ -278,7 +278,11 @@ enum ubbd_queue_kstatus {
 	UBBD_QUEUE_KSTATUS_STOPPING,
 	UBBD_QUEUE_KSTATUS_STOPPED,
 	UBBD_QUEUE_KSTATUS_REMOVING,
+	UBBD_QUEUE_KSTATUS_MAX,
 };
+
+#define UBBD_QUEUE_KSTATUS_MASK		0xff
+#define UBBD_QUEUE_KSTATUS_SHIFT	8
 
 /*
                       +-----+
@@ -313,12 +317,17 @@ remove_dev   +-----------v---------------+                                |
                       +------+
 */
 
+/* kstatus is limited by maximum of u8 */
 enum ubbd_dev_kstatus {
 	UBBD_DEV_KSTATUS_INIT = 0,
 	UBBD_DEV_KSTATUS_PREPARED,
 	UBBD_DEV_KSTATUS_RUNNING,
 	UBBD_DEV_KSTATUS_REMOVING,
+	UBBD_DEV_KSTATUS_MAX,
 };
+
+#define UBBD_DEV_KSTATUS_MASK		0xff
+#define UBBD_DEV_KSTATUS_SHIFT		8
 
 /*
  * Format of nested UBBD_ATTR_DEV_OPTS
