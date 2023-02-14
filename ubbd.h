@@ -160,6 +160,7 @@ enum ubbd_genl_attr {
 #define UBBD_ATTR_FLAGS_ADD_FUA		1 << 1
 #define UBBD_ATTR_FLAGS_ADD_DISCARD	1 << 2
 #define UBBD_ATTR_FLAGS_ADD_WRITE_ZEROS	1 << 3
+#define UBBD_ATTR_FLAGS_ADD_READONLY	1 << 4
 
 #define UBBD_ATTR_MAX (__UBBD_ATTR_MAX - 1)
 
