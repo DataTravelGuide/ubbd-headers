@@ -340,6 +340,7 @@ enum ubbd_dev_kstatus {
  *	...
  */
 enum {
+	UBBD_DEV_OPTS_UNSPEC,
 	UBBD_DEV_OPTS_DP_RESERVE,
 	UBBD_DEV_OPTS_DATA_PAGES,
 	UBBD_DEV_OPTS_DEV_SIZE,
